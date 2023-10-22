@@ -1,0 +1,3 @@
+epochs: 300
+num_classes: 10
+ckpt_name: ckpts/epoch300_10words.ckpt
