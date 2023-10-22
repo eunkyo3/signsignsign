@@ -7,17 +7,19 @@
   
 국립국어원에 따르면, 청각장애인 중, 수어를 1순위 의사소통 방법으로 사용한다고 응답한 비율이 55.9%로 조사되었으며 농인들의 주 언어는 한국어가 아닌 수어로, 공공시설의 한글 정보 체계를 받아들이지 못하는 경향이 크다.  
   
-청각장애인은 사회 전반에 걸친 청인 중심의 정보 전달 체계로 인해 일상생활, 경제활동, 긴급상황 등 거의 모든 분야에 걸쳐 다양한 고충을 겪으며 최종적으로 사회 통합과 참여에 있어 제한을 겪고 있다. 우리는 이러한 농인들의 불편을 해소하기 위해 무엇을 할 수 있을지 고민했다.
+청각장애인은 사회 전반에 걸친 청인 중심의 정보 전달 체계로 인해 일상생활, 경제활동, 긴급상황 등 거의 모든 분야에 걸쳐 다양한 고충을 겪으며 최종적으로 사회 통합과 참여에 있어 제한을 겪고 있다. 우리는 이러한 농인들의 불편을 해소하기 위해 무엇을 할 수 있을지 고민했다.  
 
-![image](./assets/img1.png)
+<center><img src="./assets/img1.png" width="40%" height="40%"/></center>  
+
+___  
 
 ## 2. 팀원 구성
 
 2023 전기 부산대학교 정보컴퓨터공학부 졸업과제 07번 조 `VIP`  
 VIP는 부산대학교 시각지능 및 인지연구실 (Vision Intelligence and Perception Lab, VIPLab)의 이름으로부터 착안했다.
 
-- [[팀장] 박재형](https://github.com/ianpark318)  
-<img src="https://github.com/ianpark318.png" width="100">  
+☠ [[팀장] 박재형](https://github.com/ianpark318)  
+<img src="https://github.com/ianpark318.png" width="200">  
   
   - 💌 [ianpark318@gmail.com](mailto:ianpark318@gmail.com)
     - 수어 통역 모델 학습
@@ -26,10 +28,10 @@ VIP는 부산대학교 시각지능 및 인지연구실 (Vision Intelligence and
     - 직접 촬영 영상으로부터 데이터셋 구축
     - 데이터 전처리 코드 작성
     - 착수, 중간보고서, 시연계획서, 포스터 작성  
-    <br>
+    <br><br>
   
-- [전민수](https://github.com/minsuuuj)  
-  <img src="https://github.com/minsuuuj.png" width="100">  
+☠ [전민수](https://github.com/minsuuuj)  
+  <img src="https://github.com/minsuuuj.png" width="200">  
   
   - 💌 [wjsrl528@gmail.com](mailto:wjsrl528@gmail.com)
     - 관련 Dataset 및 Model 탐색
@@ -37,10 +39,11 @@ VIP는 부산대학교 시각지능 및 인지연구실 (Vision Intelligence and
     - Open CV Visualization 부분 개발
     - Custom Dataset 데이터 생성
     - 최종 보고서 작성 및 포스터 제작
+<br>
 
+___
 ## 3. 시스템 Framework
-
-![system-structure](assets/img2.png)
+<center><img src="./assets/img2.png" width="70%" height="70%"/></center>
 
 1. s 키를 누르면 영상 촬영이 시작되고, e 키를 누르면 촬영이 완료되며, OpenCV로부터 실시간 동영상의 frame을 추출
 2. 1번에서 frame이 추출됨과 동시에 Mediapipe를 통해 hand keypoints를 검출
@@ -48,8 +51,8 @@ VIP는 부산대학교 시각지능 및 인지연구실 (Vision Intelligence and
 4. Tensor를 학습된 Sign-Language Translator로 전달하여 추론
 5. Output으로 나온 tensor의 값 중, 가장 큰 값에 해당하는 index를 수어 목록에서 찾고 이를 화면에 시각화함으로써 수어 통역 서비스를 사용자에게 제공
 
-#### Base Model
-![slt](assets/img3.png)
+### Base Model
+<center><img src="./assets/img3.png" width="70%" height="70%"/></center>
 Sign-Language Translation Model은 총 3개의 Transformer Based Module로 구성되어 있다. 두 개는 왼손, 오른손 각 21개의 points를 입력으로 받으며, 나머지 하나는 양손을 합친 42개의 points를 입력으로 받는다. 이와 같은 구조를 가진 Sign-Language Translator를 사용함으로써 왼손, 오른손 각각의 역할이 다른 수어를 판별하는데 큰 효과를 얻을 수 있음을 확인하였다. 세 가지 모듈에서 나온 output은 scalar값으로, 세 값을 단순 덧셈해주어 output으로 산출한다.
 
 
@@ -59,7 +62,7 @@ Sign-Language Translation Model은 총 3개의 Transformer Based Module로 구�
 - 일상적 수어 10개를 선정하고 해당 수어들에 대해 공부하여 숙지
 - 각 수어를 팀원 당 25번 시연하여 총 500개의 2D Keypoint data를 획득
 - 이렇게 획득한 Keypoint를 SLT 모델 학습의 Sudo Ground Truth로 활용
-![dataset](assets/img4.png)
+<center><img src="./assets/img4.png" width="30%" height="30%"/></center>
 
 
 #### Dataset Hierarchy
@@ -83,11 +86,13 @@ Sign-Language Translation Model은 총 3개의 Transformer Based Module로 구�
 ```
 
 ### 수어 말뭉치(Gloss)
-![gloss](assets/img5.png)
+<center><img src="./assets/img5.png" width="30%" height="30%"/></center>
 본 프로젝트에서 분류할 말뭉치는
 1. 상징성 (수어)
 2. 일상성 (당신, 식사하셨어요?, 반갑습니다, 이름이 뭐예요?)  
 을 띄는 단어로 선정하였다.
+
+___
 
 ## 4. 소개 및 시연 영상
 
