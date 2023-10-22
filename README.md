@@ -102,7 +102,7 @@ ___
 <center><img src="./assets/img6.png" width="20%" height="20%"/></center>
 
 
-### [시연 영상](https://chatfoodie.net/)
+### [시연 영상](https://youtube.com/shorts/UKKTGugQd2w)
 <center><img src="./assets/img7.png" width="20%" height="20%"/></center>
 
 ## 5. 설치 및 사용법
