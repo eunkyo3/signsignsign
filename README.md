@@ -86,22 +86,24 @@ Sign-Language Translation Model은 총 3개의 Transformer Based Module로 구�
 ```
 
 ### 수어 말뭉치(Gloss)
-<center><img src="./assets/img5.png" width="30%" height="30%"/></center>
+<center><img src="./assets/img5.png" width="30%" height="30%"/></center>  
+
 본 프로젝트에서 분류할 말뭉치는
-1. 상징성 (수어)
-2. 일상성 (당신, 식사하셨어요?, 반갑습니다, 이름이 뭐예요?)  
+- 상징성 (수어)
+- 일상성 (당신, 식사하셨어요?, 반갑습니다, 이름이 뭐예요?)  
 을 띄는 단어로 선정하였다.
 
 ___
 
 ## 4. 소개 및 시연 영상
 
-### 출력 결과
-![gloss](assets/img6.png)
+### 출력 결과  
+
+<center><img src="./assets/img6.png" width="20%" height="20%"/></center>
 
 
 ### [시연 영상](https://chatfoodie.net/)
-![gloss](assets/img7.png)
+<center><img src="./assets/img7.png" width="20%" height="20%"/></center>
 
 ## 5. 설치 및 사용법
 
@@ -132,5 +134,6 @@ If screen shows up,
 - press `S` button to start record
 - press `E` button to finish recording
 
-Then model will estimate and visualize what sign-language gloss you performed!
-![gloss](assets/img6.png)
+Then model will estimate and visualize what sign-language gloss you performed!  
+
+<center><img src="./assets/img6.png" width="20%" height="20%"/></center>
