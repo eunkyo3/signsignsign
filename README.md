@@ -7,7 +7,7 @@
   
 국립국어원에 따르면, 청각장애인 중, 수어를 1순위 의사소통 방법으로 사용한다고 응답한 비율이 55.9%로 조사되었으며 농인들의 주 언어는 한국어가 아닌 수어로, 공공시설의 한글 정보 체계를 받아들이지 못하는 경향이 크다.  
   
-청각장애인은 사회 전반에 걸친 청인 중심의 정보 전달 체계로 인해 일상생활, 경제활동, 긴급상황 등 거의 모든 분야에 걸쳐 다양한 고충을 겪으며 최종적으로 사회 통합과 참여에 있어 제한을 겪고 있다. 우리는 이러한 농인들의 불편을 해소하기 위해 무엇을 할 수 있을지 고민했다.  
+이와 같이 청각장애인은 사회 전반에 걸친 청인 중심의 정보 전달 체계로 인해 일상생활, 경제활동, 긴급상황 등 거의 모든 분야에 걸쳐 다양한 고충을 겪으며 최종적으로 사회 통합과 참여에 있어 제한을 겪고 있다. 우리는 이러한 농인들의 불편을 해소하기 위해 무엇을 할 수 있을지 고민했다.  
 
 <center><img src="./assets/img1.png" width="40%" height="40%"/></center>  
 
@@ -53,7 +53,10 @@ ___
 
 ### Base Model
 <center><img src="./assets/img3.png" width="70%" height="70%"/></center>
-Sign-Language Translation Model은 총 3개의 Transformer Based Module로 구성되어 있다. 두 개는 왼손, 오른손 각 21개의 points를 입력으로 받으며, 나머지 하나는 양손을 합친 42개의 points를 입력으로 받는다. 이와 같은 구조를 가진 Sign-Language Translator를 사용함으로써 왼손, 오른손 각각의 역할이 다른 수어를 판별하는데 큰 효과를 얻을 수 있음을 확인하였다. 세 가지 모듈에서 나온 output은 scalar값으로, 세 값을 단순 덧셈해주어 output으로 산출한다.
+Sign-Language Translation Model은 총 3개의 Transformer Based Module로 구성되어 있다.  
+두 개는 왼손, 오른손 각 21개의 points를 입력으로 받으며, 나머지 하나는 양손을 합친 42개의 points를 입력으로 받는다.  
+이와 같은 구조를 가진 Sign-Language Translator를 사용함으로써 왼손, 오른손 각각의 역할이 다른 수어를 판별하는데 큰 효과를 얻을 수 있음을 확인하였다.  
+세 가지 모듈에서 나온 output은 scalar값으로, 세 값을 단순 덧셈해주어 output으로 산출한다.
 
 
 ### Dataset
@@ -102,8 +105,12 @@ ___
 <center><img src="./assets/img6.png" width="20%" height="20%"/></center>
 
 
-### [시연 영상](https://youtube.com/shorts/UKKTGugQd2w)
+### [시연 영상 바로 가기](https://youtube.com/shorts/UKKTGugQd2w)
+
+### 시연영상 QR 코드
 <center><img src="./assets/img7.png" width="20%" height="20%"/></center>
+
+### [소개 동영상 바로 가기](https://www.youtube.com/watch?v=pTx5E4swHBE)
 
 ## 5. 설치 및 사용법
 
