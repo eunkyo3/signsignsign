@@ -40,8 +40,9 @@ if __name__ == "__main__":
         "사랑",
         "수어",
         "만나서 반가워요!",
+        "",
     ]
-    model = InferModel().load_from_checkpoint(checkpoint_path=ckpt_name)
+    model = InferModel.load_from_checkpoint(checkpoint_path=ckpt_name)
     model.eval().to("cuda")
     label_play_time = 0
     display_flag = False
